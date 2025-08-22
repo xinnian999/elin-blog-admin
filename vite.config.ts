@@ -16,9 +16,9 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',
     proxy: {
-      // '/api': 'http://localhost:3000',
+      '/api': 'http://localhost:3000',
     },
     port: 3001,
   },
-  // base: '/admin/',
+  base: process.env.VITE_BASE_URL,
 })

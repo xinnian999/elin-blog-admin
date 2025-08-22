@@ -15,8 +15,6 @@ pinia.use(piniaPluginPersistedstate)
 
 const vue = createApp(App)
 
-window.basePath = ''
-
 vue.use(pinia)
 vue.use(router)
 vue.use(ElementPlus, {
