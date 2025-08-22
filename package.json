@@ -7,8 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint . --fix",
-    "format": "prettier --write src/"
+    "build:image": "docker build -t elin-blog-admin .",
+    "release": "node script/release.js"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
