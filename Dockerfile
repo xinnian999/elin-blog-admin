@@ -1,6 +1,8 @@
 # 使用官方 Node.js Alpine 镜像作为基础镜像
 FROM crpi-a7p27yxlrmekg1a3.cn-beijing.personal.cr.aliyuncs.com/elin-common/node-18:latest AS build
 
+ENV VITE_BASE_URL=/admin/
+
 # 设置工作目录
 WORKDIR /app
 
@@ -25,7 +27,7 @@ FROM crpi-a7p27yxlrmekg1a3.cn-beijing.personal.cr.aliyuncs.com/elin-common/nginx
 COPY nginx.conf /etc/nginx/nginx.conf
 
 # 将构建好的静态文件复制到 nginx 默认路径
-COPY --from=build /app/dist /usr/share/nginx/html
+COPY --from=build /app/dist /usr/share/nginx/html/admin
 
 # 暴露 80 端口
 EXPOSE 80

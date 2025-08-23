@@ -90,7 +90,7 @@ const handleLogin = async () => {
     // 回退到上一个页面
     window.history.back()
   } else {
-    window.location.href = '/'
+    window.location.href = import.meta.env.VITE_BASE_URL
   }
 }
 </script>

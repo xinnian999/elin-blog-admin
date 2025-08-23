@@ -8,6 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "build:image": "docker build -t elin-blog-admin .",
+    "run:image": "docker run -d -p 3001:80 elin-blog-admin",
     "release": "node script/release.js"
   },
   "dependencies": {
